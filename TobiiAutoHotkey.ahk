@@ -5,22 +5,17 @@ SetTitleMatchMode, 2
 F8::Send {Home}
 F9::Send {End}
 
-
-F10::Send {NumpadDiv}   ; Speak last sentence
-F11::Send {NumpadMult}  ; Yes
-F12::Send {NumpadSub}   ; No
-
-XButton1::Send {NumpadMult}  ; Yes
-XButton2::Send {NumpadSub}   ; No
-;XButton1::SoundPlay, C:\yes.wav
-;XButton2::SoundPlay, C:\no.wav
-
+; Speak "yes" and "no" samples using back+forward mouse button or F11+F12
+F11::SoundPlay, SoundYes.wav
+F12::SoundPlay, SoundNo.wav
+XButton1::SoundPlay, SoundYes.wav
+XButton2::SoundPlay, SoundNo.wav
 
 ; Only applicable if Tobii is active
 #IfWinActive Communicator
 RButton::Send {Backspace} ; Backspace
 MButton::Send {NumpadDiv} ; Speak last sentence
+F10::Send {NumpadDiv}     ; Speak last sentence
 WheelDown::Send {Right}   ; Cursor to right
 WheelUp::Send {Left}      ; Cursor to left
 Numpad0::Send {NumpadDiv} ; Speak last sentence, for remote control
-RWin::Send {NumpadAdd}    ; Use Right windows button for scanning
