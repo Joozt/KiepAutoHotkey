@@ -6,10 +6,10 @@ F8::Send {Home}
 F9::Send {End}
 
 ; Speak "yes" and "no" samples using back+forward mouse button or F11+F12
-F11::SoundPlay, SoundYes.wav
-F12::SoundPlay, SoundNo.wav
-XButton1::SoundPlay, SoundYes.wav
-XButton2::SoundPlay, SoundNo.wav
+F11::SoundPlay, SoundNo.wav
+F12::SoundPlay, SoundYes.wav
+XButton1::SoundPlay, SoundNo.wav
+XButton2::SoundPlay, SoundYes.wav
 
 ; Only applicable if Tobii is active
 #IfWinActive Communicator
